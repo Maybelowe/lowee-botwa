@@ -3,6 +3,7 @@ let levelling = require('../lib/levelling')
 const canvacord = require('canvacord')
 let handler = async (m, { conn, usedPrefix }) => {
   let pp = './src/avatar_contact.png'
+  let bekgron = '/src/bgCanva.png'
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
   try {
     pp = await conn.getProfilePicture(who)
@@ -62,10 +63,11 @@ Terdaftar: ${registered ? 'Ya (' + new Date(regTime).toLocaleString() + ')' : 'T
                       .setCurrentXP(user.exp - min)
                       .setRequiredXP(xp)
                       .setProgressBar("#030500", "COLOR")
+                      .setBackground('IMAGE', bekgron)
                       .setUsername(conn.getName(whe))
                       .setDiscriminator(discriminator);
                  rank.build()
-                      .then(async data => {
+                      .then(async (data) => {
                       	await conn.sendButtonImg(m.chat, data, str.trim(), credit, 'Daily', ',daily')
                       })
                       

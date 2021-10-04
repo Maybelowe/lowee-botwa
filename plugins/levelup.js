@@ -3,6 +3,7 @@ const canvacord = require('canvacord')
 
 let handler = async (m, { conn, usedPrefix }) => {
   let pp = './src/avatar_contact.png'
+  let bekgron = '/src/bgCanva.png'
   let who = m.sender
   let discriminator = who.substring(9, 13)
   try {
@@ -24,10 +25,11 @@ let handler = async (m, { conn, usedPrefix }) => {
         .setCurrentXP(exp - min)
         .setRequiredXP(xp)
         .setProgressBar("#030500", "COLOR")
+        .setBackground('IMAGE', bekgron)
         .setUsername(conn.getName(who))
         .setDiscriminator(discriminator)
       rank.build()
-        .then(async data => {
+        .then(async (data) => {
           await conn.sendButtonImg(m.chat, data, `Level *${level} (${exp - min}/${xp})*\nKurang *${max - exp}* lagi!`.trim(), '© stikerin', 'Auto Level Up', `${usedPrefix}on autolevelup`, m, { thumbnail: data, height: 282, width: 934 })
         })
     }
@@ -41,10 +43,11 @@ let handler = async (m, { conn, usedPrefix }) => {
         .setCurrentXP(exp - min)
         .setRequiredXP(xp)
         .setProgressBar("#030500", "COLOR")
+        .setBackground('IMAGE', bekgron)
         .setUsername(conn.getName(who))
         .setDiscriminator(discriminator)
       rank.build()
-        .then(async data => {
+        .then(async (data) => {
           await conn.sendButtonImg(m.chat, data, `_*Level Up!*_\n_${before}_ -> _${level}_`.trim(), '© stikerin', 'Auto Level Up', `${usedPrefix}on autolevelup`, m, { thumbnail: data, height: 282, width: 934 })
         })
     }
