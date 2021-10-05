@@ -10,16 +10,16 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
   
   let mentionedJid = [m.sender]
   const card = await new canvacord.Spotify()
-    .setAuthor('IG : @akmalz.zp')
-    .setAlbum(filesizeF + ' MB')
-    .setStartTimestamp('13:41')
-    .setEndTimestamp('21:07:32')
+    .setAuthor('akmalz.zp')
+    .setAlbum(filesizeF)
+    .setStartTimestamp('00:41')
+    .setEndTimestamp('14:02:32')
     .setImage(thumb)
     .setTitle(title);
 
 card.build()
     .then(async (buffer) => {
-        conn.sendFile(m.chat, buffer, title + '.png', `Audio sedang dikirim, mohon tunggu....`.trim(), m, false, { contextInfo: { mentionedJid } })
+        conn.sendFile(m.chat, buffer, title + '.png', ``.trim(), m, false, { contextInfo: { mentionedJid } })
     });
   
   let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < filesize
