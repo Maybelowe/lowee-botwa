@@ -1,4 +1,5 @@
 let fs = require('fs')
+let fetch = require('node-fetch')
 global.ownerName = ['Akmalz','J-BOT'] // Ketik nama kamu disini
 global.botName = 'WA-BOT' // Isi nama bot kamu
 global.owner = ['6281326635396', '62857024477637'] // Letakan nomor kamu disini
@@ -34,18 +35,28 @@ global.APIKeys = { // APIKey nya disini
 global.repoUrl = 'https://github.com/Dvnz99/stikelinbot'
 global.repoName = 'Maybelowe/updet'
 global.repoBranch = 'main'
+
+global.repos = {
+	url: 'https://github.com/Dvnz99/stikelinbot',
+	name: 'Maybelowe/updet',
+	branch: 'main',
 }
 
 // Sticker WM
 global.packname = 'BOT-WA'
 global.author = ''
-
+/*
+let res = fetch('https://raw.githubusercontent.com/Dvnz99/stikelinbot/master/elaina.json?token=ATKDFAU4E4CLK46S3WVJFOTBLPK7O')
+let data = res.json()
+let ela = data[Math.floor(Math.random() * data.length)]
+global.imek = ela.url
+*/
 global.wait = '_*tunggu..*_'
 global.eror = '_*Server Error*_'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 global.igUrl = 'https://instagram.com/akmalz.zp'
 
-global.multiplier = 60 // Semakin tinggi, semakin sulit naik level
+global.multiplier = 100 // Semakin tinggi, semakin sulit naik level
 
 let chalk = require('chalk')
 let file = require.resolve(__filename)
