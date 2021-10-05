@@ -7,6 +7,7 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
   let server = (args[1] || servers[0]).toLowerCase()
   let { dl_link, thumb, title, filesize, filesizeF } = await yta(args[0], servers.includes(server) ? server : servers[0])
   
+  /*
   let mentionedJid = [m.sender]
   const card = await new canvacord.Spotify()
     .setAuthor(data.author)
@@ -18,8 +19,8 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
 
 card.build()
     .then(async (buffer) => {
-        conn.sendFile(m.chat, buffer, title + '.png', `*Judul:* ${title}\n*Ukuran File:* ${filesizeF}`.trim(), m, false, { contextInfo: { mentionedJid } })
-    });
+        conn.sendFile(m.chat, buffer, title + '.png', `Audio sedang dikirim, mohon tunggu....`.trim(), m, false, { contextInfo: { mentionedJid } })
+    });*/
   
   let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < filesize
   m.reply(isLimit ? `Ukuran File: ${filesizeF}\nUkuran file diatas ${limit} MB, download sendiri: ${dl_link}` : global.wait)
