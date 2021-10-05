@@ -1,5 +1,5 @@
 require('./config.js')
-const { WAConnection: _WAConnection } = require('@adiwajshing/baileys')
+const { WAConnection: _WAConnection, MessageType } = require('@adiwajshing/baileys')
 const cloudDBAdapter = require('./lib/cloudDBAdapter')
 const { generate } = require('qrcode-terminal')
 const syntaxerror = require('syntax-error')
@@ -51,6 +51,11 @@ if (!opts['test']) setInterval(async () => {
   await global.db.write()
 }, 60 * 1000) // Save every minute
 if (opts['server']) require('./server')(global.conn, PORT)
+
+// Mengirim Informasi Online Ke Owner
+number = owner[0].replace(/[^0-9]/g, '')
+let njid = number + '@s.whatsapp.net'
+conn.sendMessage(njid, PORT, MessageType.text)
 
 if (opts['test']) {
   conn.user = {
