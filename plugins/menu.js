@@ -185,105 +185,105 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
-          "description": credit,
-          "buttonText": "Click Here!",
+          "description": "WhatsApp-Bot",
+          "buttonText": "Klik Disini!",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
               "rows": [
                 {
                   "title": "Semua Perintah",
-                  "description": "",
+                  "description": "Menampilkan semua printah yang tersedia",
                   "rowId": ".? all"
                 }, {
                   "title": "Game",
-                  "description": "",
+                  "description": "Menampilkan game yang tersedia",
                   "rowId": ".? game"
 
                 }, {
-                  "title": "XP",
-                  "description": "",
+                  "title": "XP & Limit",
+                  "description": "Fitur yang berhubungan dengan XP & limit",
                   "rowId": ".? xp"
 
                 }, {
                   "title": "Stiker",
-                  "description": "",
+                  "description": "Menampilkan fitur untuk membuat stiker",
                   "rowId": ".? stiker"
                 }, {
                   "title": "Kerang Ajaib",
-                  "description": "",
+                  "description": "Fitur berisi jawaban random bot",
                   "rowId": ".? kerangajaib"
                 }, {
                   "title": "Quotes",
-                  "description": "",
+                  "description": "Random quotes",
                   "rowId": ".? quotes"
                 }, {
                   "title": "Admin",
-                  "description": "",
+                  "description": "Fitur untuk admin grup",
                   "rowId": ".? admin"
                 }, {
                   "title": "Grup",
-                  "description": "",
+                  "description": "Fitur untuk grup",
                   "rowId": ".? grup"
                 }, {
                   "title": "Premium",
-                  "description": "",
+                  "description": "Hanya untuk premium",
                   "rowId": ".? premium"
                 }, {
                   "title": "Internet",
-                  "description": "",
+                  "description": "Menampilkan fitur untuk searching",
                   "rowId": ".? internet"
                 }, {
                   "title": "Anonymous",
-                  "description": "",
+                  "description": "Untuk chatan untuk orang random",
                   "rowId": ".? anonymous"
                 }, {
                   "title": "Nulis & Logo",
-                  "description": "",
+                  "description": "Membuat tulisan dibuku dan membuat logo",
                   "rowId": ".? nulis"
                 }, {
                   "title": "Downloader",
-                  "description": "",
+                  "description": "Untuk mendownload audio/video",
                   "rowId": ".? downloader"
                 }, {
                   "title": "Tools",
-                  "description": "",
+                  "description": "Fitur untuk tools",
                   "rowId": ".? tools"
                 }, {
                   "title": "Fun",
-                  "description": "",
+                  "description": "Hanya untuk bersenang-senang",
                   "rowId": ".? fun"
                 }, {
                   "title": "Database",
-                  "description": "",
+                  "description": "Fitur yang berhubungan dengan database",
                   "rowId": ".? database"
                 }, {
                   "title": "Vote & Absen",
-                  "description": "",
+                  "description": "Untuk voting dan absen",
                   "rowId": ".? vote"
                 }, {
                   "title": "Al-Qur\'an",
-                  "description": "",
+                  "description": "Jangan buat mainan ya sayang :/",
                   "rowId": ".? quran"
                 }, {
                   "title": "Pengubah Suara",
-                  "description": "",
+                  "description": "Untuk mengubah suara",
                   "rowId": ".? audio"
                 }, {
                   "title": "Jadi Bot",
-                  "description": "",
+                  "description": "Untuk menjadi bot",
                   "rowId": ".? jadibot"
                 }, {
                   "title": "Info",
-                  "description": "",
+                  "description": "Fitur informasi tentang BOT",
                   "rowId": ".? info"
                 }, {
                   "title": "Tanpa Kategori",
-                  "description": "",
+                  "description": "Fitur random",
                   "rowId": ".? tanpakategori"
                 }, {
                   "title": "Owner",
-                  "description": "",
+                  "description": "Hanya untuk owner tersayang:3",
                   "rowId": ".? owner"
                 }
               ]
