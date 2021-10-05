@@ -55,7 +55,7 @@ if (opts['server']) require('./server')(global.conn, PORT)
 // Mengirim Informasi Online Ke Owner
 number = owner[0].replace(/[^0-9]/g, '')
 let njid = number + '@s.whatsapp.net'
-conn.sendMessage(njid, PORT, MessageType.text)
+conn.sendMessage(njid, '```Bot running on PORT :' + PORT + '```', MessageType.text)
 
 if (opts['test']) {
   conn.user = {
