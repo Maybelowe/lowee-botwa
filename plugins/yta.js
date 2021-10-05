@@ -10,8 +10,8 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
   
   let mentionedJid = [m.sender]
   const card = await new canvacord.Spotify()
-    .setAuthor('akmalz.zp')
-    .setAlbum(filesizeF)
+    .setAuthor('Akmalz')
+    .setAlbum('Undefined')
     .setStartTimestamp('00:41')
     .setEndTimestamp('14:02:32')
     .setImage(thumb)
