@@ -51,6 +51,16 @@ let data = res.json()
 let ela = data[Math.floor(Math.random() * data.length)]
 global.imek = ela.url
 */
+
+let listimg = [
+	"https://i.ibb.co/dMs2VDN/elaina-majo-no-tabitabi-library-books-witch-school-white-hair-smiling-anime-42814-resized.jpg",
+	"https://i.ibb.co/3sVR1g5/897710-Majo-no-Tabitabi-Elaina-Majo-no-Tabitabi-witch.jpg",
+	"https://i.ibb.co/bXMwM3k/HD-wallpaper-anime-the-journey-of-elaina-elaina-the-journey-of-elaina-majo-no-tabitabi.jpg",
+	"https://i.ibb.co/r2fCYWV/elaina-majo-no-tabitabi.jpg",
+	"https://i.ibb.co/Qr5z3JK/HD-wallpaper-anime-the-journey-of-elaina-elaina-the-journey-of-elaina.jpg"
+]
+global.rImg = listimg[Math.floor(Math.random() * listimg.length)]
+
 global.wait = '_*tunggu..*_'
 global.eror = '_*Server Error*_'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
