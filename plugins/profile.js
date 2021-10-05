@@ -64,6 +64,7 @@ Terdaftar: ${registered ? 'Ya (' + new Date(regTime).toLocaleString() + ')' : 'T
                       .setCurrentXP(user.exp - min)
                       .setRequiredXP(xp)
                       .setProgressBar("#f2aa4c", "COLOR")
+                      .setBackground("IMAGE", bekgron)
                       .setUsername(conn.getName(whe))
                       .setDiscriminator(discriminator);
                  rank.build()
