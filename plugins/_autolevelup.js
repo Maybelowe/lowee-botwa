@@ -8,6 +8,7 @@ handler.before = async function (m) {
                 return { ...value, jid: key }
         })
         let pp = './src/avatar_contact.png'
+        let bekgron = './src/bgCanva.png'
         let who = m.sender
         let discriminator = who.substring(9, 13)
         let sortedLevel = users.map(toNumber('level')).sort(sort('level'))
@@ -31,6 +32,7 @@ handler.before = async function (m) {
                                 .setCurrentXP(user.exp - min)
                                 .setRequiredXP(xp)
                                 .setProgressBar("#f2aa4c", "COLOR")
+                                .setBackground("IMAGE", bekgron)
                                 .setUsername(this.getName(who))
                                 .setDiscriminator(discriminator);
                         rank.build()
