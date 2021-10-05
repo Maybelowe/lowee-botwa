@@ -1,9 +1,10 @@
 let PhoneNumber = require('awesome-phonenumber')
 let levelling = require('../lib/levelling')
 const canvacord = require('canvacord')
+const fs = require('fs')
 let handler = async (m, { conn, usedPrefix }) => {
   let pp = './src/avatar_contact.png'
-  let bekgron = '/src/bgCanva.png'
+  let bekgron = './src/bgCanva.png'
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
   try {
     pp = await conn.getProfilePicture(who)
@@ -62,13 +63,16 @@ Terdaftar: ${registered ? 'Ya (' + new Date(regTime).toLocaleString() + ')' : 'T
                       .setLevel(user.level)
                       .setCurrentXP(user.exp - min)
                       .setRequiredXP(xp)
-                      .setProgressBar("#030500", "COLOR")
+                      .setProgressBar("#ffffff", "COLOR")
                       .setBackground('IMAGE', bekgron)
                       .setUsername(conn.getName(whe))
                       .setDiscriminator(discriminator);
                  rank.build()
                       .then(async (data) => {
-                      	await conn.sendButtonImg(m.chat, data, str.trim(), credit, 'Daily', ',daily')
+                      	canvacord.write(data, './src/ampas.png')
+                      	await conn.sendButtonImg(m.chat, './src/ampas.png', str.trim(), credit, 'Daily', '.daily')
+                      	fs.unlinkSync('./src/ampas.png')
+                      	//await conn.sendButtonImg(m.chat, data, str.trim(), credit, 'Daily', ',daily')
                       })
                       
 function enumGetKey(a) {
