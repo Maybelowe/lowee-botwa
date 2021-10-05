@@ -26,14 +26,11 @@ let handler = async (m, { conn, usedPrefix }) => {
         .setCurrentXP(exp - min)
         .setRequiredXP(xp)
         .setProgressBar("#ffffff", "COLOR")
-        .setBackground('IMAGE', bekgron)
         .setUsername(conn.getName(who))
         .setDiscriminator(discriminator)
       rank.build()
         .then(async (data) => {
-        	canvacord.write(data, './src/ampask.png')
-          await conn.sendButtonImg(m.chat, './src/ampask.png', cantUp.trim(), '© stikerin', 'Auto Level Up', `${usedPrefix}on autolevelup`, m, { thumbnail: './src/ampask.png', height: 282, width: 934 })
-          fs.unlinkSync('./src/ampask.png')
+          await conn.sendButtonImg(m.chat, data, cantUp.trim(), '© stikerin', 'Auto Level Up', `${usedPrefix}on autolevelup`, m, { thumbnail: data, height: 282, width: 934 })
         })
     }
     let before = level * 1
@@ -47,14 +44,11 @@ let handler = async (m, { conn, usedPrefix }) => {
         .setCurrentXP(exp - min)
         .setRequiredXP(xp)
         .setProgressBar("#ffffff", "COLOR")
-        .setBackground('IMAGE', bekgron)
         .setUsername(conn.getName(who))
         .setDiscriminator(discriminator)
       rank.build()
         .then(async (data) => {
-        	canvacord.write(data, './src/ampasu.png')
-          await conn.sendButtonImg(m.chat, './src/ampasu.png', canUp.trim(), '© stikerin', 'Auto Level Up', `${usedPrefix}on autolevelup`, m, { thumbnail: './src/ampasu.png', height: 282, width: 934 })
-          fs.unlinkSync('./src/ampasu.png')
+          await conn.sendButtonImg(m.chat, data, canUp.trim(), '© stikerin', 'Auto Level Up', `${usedPrefix}on autolevelup`, m, { thumbnail: data, height: 282, width: 934 })
         })
     }
   }

@@ -64,15 +64,11 @@ Terdaftar: ${registered ? 'Ya (' + new Date(regTime).toLocaleString() + ')' : 'T
                       .setCurrentXP(user.exp - min)
                       .setRequiredXP(xp)
                       .setProgressBar("#ffffff", "COLOR")
-                      .setBackground('IMAGE', bekgron)
                       .setUsername(conn.getName(whe))
                       .setDiscriminator(discriminator);
                  rank.build()
                       .then(async (data) => {
-                      	canvacord.write(data, './src/ampas.png')
-                      	await conn.sendButtonImg(m.chat, './src/ampas.png', str.trim(), credit, 'Daily', '.daily')
-                      	fs.unlinkSync('./src/ampas.png')
-                      	//await conn.sendButtonImg(m.chat, data, str.trim(), credit, 'Daily', ',daily')
+                      	await conn.sendButtonImg(m.chat, data, str.trim(), credit, 'Daily', ',daily')
                       })
                       
 function enumGetKey(a) {
