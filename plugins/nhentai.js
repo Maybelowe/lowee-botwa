@@ -6,10 +6,10 @@ let handler = async (m, { conn, usedPrefix: _p, text }) => {
     	conn.sendMessage(m.chat, res.data, MessageType.document, { mimetype: Mimetype.pdf, filename: `nhentai.pdf` }).then((m) => {
         m.reply('Tobat bang');
     })
-}).catch(e => {
-    m.reply(e)
-})
-
+	}).catch(e => {
+ 	   m.reply(e)
+	})
+}
 handler.help = ['nhentai']
 handler.tags = ['downloader']
 handler.command = /^nhentai/i
