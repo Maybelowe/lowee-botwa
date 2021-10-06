@@ -26,5 +26,6 @@ let val = text
 handler.help = ['mtk <expression>']
 handler.command = /^(mtk?)$/i
 handler.exp = 5
+handler.premium = true
 
 module.exports = handler
