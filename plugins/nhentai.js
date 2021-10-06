@@ -1,3 +1,4 @@
+const { MessageType, Mimetype } = require('@adiwajshing/baileys')
 let axios = require('axios');
 let handler = async (m, { conn, usedPrefix: _p, text }) => {
 	if (!text) throw `Masukan kodenya\nContoh : ${_p}nhentai 375518`
