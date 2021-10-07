@@ -32,7 +32,7 @@ card.build()
 `.trim(), m, null, {
     asDocument: chat.useDocument, mimetype: 'audio/mp4'
   })*/
-  if (!isLimit) conn.sendMessage(m.chat, fetch(dl_link), MessageType.document, {mimetype: 'audio/mp4', filename: title, contextInfo: { externalAdReply : { title : title, body : filesizeF, mediaType: 2, thumbnailUrl: thumb, mediaUrl : args[0]} } } )
+  if (!isLimit) conn.sendMessage(m.chat, fetch(dl_link), MessageType.document, {quoted: m, mimetype: 'audio/mp4', filename: title})
 }
 handler.help = ['mp3', 'a'].map(v => 'yt' + v + ` <url>`)
 handler.tags = ['downloader']
