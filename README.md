@@ -128,9 +128,12 @@ conn.logger.level = 'trace'
 conn.logger.level = 'debug'
 ```
 
----------
+### Collaboration & Moderator repository
+[![moo-d](https://github.com/moo-d.png?size=70)](https://github.com/moo-d) | [![moo-d](https://github.com/Dvnz99.png?size=70)](https://github.com/Dvnz99) |
+|-----|-----|
+[Moo-d](https://github.com/moo-d) | [Dvnz99](https://github.com/Dvnz99) |
 
- [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo) | [![Ariffb](https://github.com/ariffb25.png?size=100)](https://github.com/ariffb25)
-----|----
-[Nurutomo](https://github.com/Nurutomo) | [Ariffb](https://github.com/ariffb25)
- Penulis / Pencipta | Penulis ulang
+### Author original of [**WABOT-AQ**](https://github.com/Nurutomo/wabot-aq)
+<a href="https://api.xteam.xyz"><img src="https://i.ibb.co/7j0vtwz/xlogo.png" width="50" height="50"></a> | [![Nurutomo](https://github.com/Nurutomo.png?size=50)](https://github.com/Nurutomo) |
+|-----|-----|
+[XTEAM](https://api.xteam.xyz/) | [Nurutomo](https://github.com/Nurutomo) |
