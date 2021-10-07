@@ -26,7 +26,7 @@ node .
 ---------
 
 ## UNTUK PENGGUNA TERMUX
-Gk Bisa Bang :>
+Gk Bisa Bang :<
 
 ---------
 
