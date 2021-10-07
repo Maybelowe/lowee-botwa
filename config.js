@@ -44,13 +44,7 @@ global.repos = {
 */
 // Sticker WM
 global.packname = 'BOT-WA'
-global.author = ''
-/*
-let res = fetch('https://raw.githubusercontent.com/Dvnz99/stikelinbot/master/elaina.json?token=ATKDFAU4E4CLK46S3WVJFOTBLPK7O')
-let data = res.json()
-let ela = data[Math.floor(Math.random() * data.length)]
-global.imek = ela.url
-*/
+global.author = '🗿'
 
 let listimg = [
 	"https://i.ibb.co/dMs2VDN/elaina-majo-no-tabitabi-library-books-witch-school-white-hair-smiling-anime-42814-resized.jpg",
