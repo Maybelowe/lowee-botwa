@@ -34,7 +34,9 @@ global.APIKeys = { // APIKey nya disini
 }
 global.repoUrl = 'https://github.com/Dvnz99/stikelinbot'
 global.repoName = 'Maybelowe/updet'
+global.repoName2 = 'ariffb25/stikerinbot'
 global.repoBranch = 'main'
+global.repoBranch2 = 'main'
 /*
 global.repos = {
 	url: 'https://github.com/Dvnz99/stikelinbot',
