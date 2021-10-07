@@ -5,7 +5,7 @@ global.botName = 'WA-BOT' // Isi nama bot kamu
 global.owner = ['6281326635396', '62857024477637'] // Letakan nomor kamu disini
 global.mods = [] // Moderator?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Pengguna premium tidak memerlukan limit
-global.credit = '© Bot-WhatsApp'
+global.credit = 'Â© Bot-WhatsApp'
 global.APIs = { // API Prefix
   // nama: 'https://website'
   bx: 'https://bx-hunter.herokuapp.com',
@@ -27,7 +27,7 @@ global.APIKeys = { // APIKey nya disini
   'https://hardianto-chan.herokuapp.com': 'hardianto',
   'https://neoxr-api.herokuapp.com': 'yntkts',
   'https://pencarikode.xyz': 'pais',
-  'https://api.xteam.xyz': '17fa27316b9ffd1818a259ae',
+  'https://api.xteam.xyz': 'apikeymu',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.me': 'Koplerjiro',
   'https://dapuhy-api.herokuapp.com': 'J-BOT',
