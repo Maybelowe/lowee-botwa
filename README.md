@@ -129,9 +129,9 @@ conn.logger.level = 'debug'
 ```
 
 ### Collaboration & Moderator repository
-[![Maybelowe](https://github.com/Maybelowe.png?size=70)](https://github.com/Maybelowe) | [![moo-d](https://github.com/Dvnz99.png?size=70)](https://github.com/Dvnz99) |
+[![Maybelowe](https://github.com/Maybelowe.png?size=70)](https://github.com/Maybelowe) | [![Maybelowe](https://github.com/Dvnz99.png?size=70)](https://github.com/Dvnz99) |
 |-----|-----|
-[Moo-d](https://github.com/moo-d) | [Dvnz99 (Akmalz)](https://github.com/Dvnz99) |
+[Maybelowe](https://github.com/Maybelowe) | [Dvnz99 (Akmalz)](https://github.com/Dvnz99) |
 
 ### Author original of [**WABOT-AQ**](https://github.com/Nurutomo/wabot-aq)
 <a href="https://api.xteam.xyz"><img src="https://i.ibb.co/7j0vtwz/xlogo.png" width="50" height="50"></a> | [![Nurutomo](https://github.com/Nurutomo.png?size=50)](https://github.com/Nurutomo) |
