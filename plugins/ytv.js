@@ -1,4 +1,4 @@
-let limit = 80
+let limit = 60
 let fetch = require('node-fetch')
 const { servers, ytv } = require('../lib/y2mate')
 let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) => {
