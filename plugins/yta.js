@@ -1,7 +1,5 @@
 let limit = 30
-const { MessageType } = require('@adiwajshing/baileys')
 const canvacord = require("canvacord");
-let fetch = require('node-fetch')
 const { servers, yta } = require('../lib/y2mate')
 let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) => {
   if (!args || !args[0]) throw `contoh:\n${usedPrefix + command} https://www.youtube.com/watch?v=yxDdj_G9uRY`
@@ -26,13 +24,13 @@ card.build()
   
   let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < filesize
   m.reply(isLimit ? `Ukuran File: ${filesizeF}\nUkuran file diatas ${limit} MB, download sendiri: ${dl_link}` : global.wait)
-  /*if (!isLimit) conn.sendFile(m.chat, dl_link, title + '.mp3', `
+  if (!isLimit) conn.sendFile(m.chat, dl_link, title + '.mp3', `
 *Judul:* ${title}
 *Ukuran File:* ${filesizeF}
 `.trim(), m, null, {
-    asDocument: chat.useDocument, mimetype: 'audio/mp4'
-  })*/
-  if (!isLimit) conn.sendMessage(m.chat, fetch(dl_link), MessageType.document, {quoted: m, mimetype: 'audio/mp4', filename: title})
+    asDocument: chat.useDocument
+  })
+  //if (!isLimit) conn.sendMessage(m.chat, fetch(dl_link), MessageType.document, {quoted: m, mimetype: 'audio/mp4', filename: title})
 }
 handler.help = ['mp3', 'a'].map(v => 'yt' + v + ` <url>`)
 handler.tags = ['downloader']
