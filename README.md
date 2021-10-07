@@ -26,13 +26,7 @@ node .
 ---------
 
 ## UNTUK PENGGUNA TERMUX
-```bash
-git clone https://github.com/Maybelowe/apdet --branch termux
-cd stikerinbot
-npm i
-npm update
-node .
-```
+Gk Bisa Bang :>
 
 ---------
 
