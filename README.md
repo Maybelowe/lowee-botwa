@@ -16,7 +16,7 @@
 * Unduh & Instal ImageMagick [`Klik Disini`](https://imagemagick.org/script/download.php)
 
 ```bash
-git clone https://github.com/ariffb25/stikerinbot
+git clone https://github.com/Maybelowe/apdet
 cd stikerinbot
 npm i
 npm update
@@ -27,7 +27,7 @@ node .
 
 ## UNTUK PENGGUNA TERMUX
 ```bash
-git clone https://github.com/ariffb25/stikerinbot --branch termux
+git clone https://github.com/Maybelowe/apdet --branch termux
 cd stikerinbot
 npm i
 npm update
