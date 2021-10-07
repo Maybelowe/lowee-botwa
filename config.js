@@ -35,13 +35,13 @@ global.APIKeys = { // APIKey nya disini
 global.repoUrl = 'https://github.com/Dvnz99/stikelinbot'
 global.repoName = 'Maybelowe/updet'
 global.repoBranch = 'main'
-
+/*
 global.repos = {
 	url: 'https://github.com/Dvnz99/stikelinbot',
 	name: 'Maybelowe/updet',
 	branch: 'main',
 }
-
+*/
 // Sticker WM
 global.packname = 'BOT-WA'
 global.author = ''
