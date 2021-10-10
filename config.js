@@ -27,7 +27,7 @@ global.APIKeys = { // APIKey nya disini
   'https://hardianto-chan.herokuapp.com': 'hardianto',
   'https://neoxr-api.herokuapp.com': 'yntkts',
   'https://pencarikode.xyz': 'pais',
-  'https://api.xteam.xyz': 'apikeymu',
+  'https://api.xteam.xyz': '17fa27316b9ffd1818a259ae',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.me': 'Koplerjiro',
   'https://dapuhy-api.herokuapp.com': 'J-BOT',
