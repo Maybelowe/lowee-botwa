@@ -31,11 +31,11 @@ resultnya = `
 *Ukuran File Video:* ${yt2.filesizeF}
 *Server y2mate:* ${usedServer}
 `
-	try {
-		await conn.send2ButtonImg(m.chat, data, resultnya.trim(), credit, 'Audio', `.yta ${vid.url}`, 'Video', `.yt ${vid.url}`, m, { thumbnail: await (await fetch(thumb)).buffer() })
-	} catch(e) {
+	//try {
+		//await conn.send2ButtonImg(m.chat, data, resultnya.trim(), credit, 'Audio', `.yta ${vid.url}`, 'Video', `.yt ${vid.url}`, m, { thumbnail: await (await fetch(thumb)).buffer() })
+	//} catch(e) {
 		await conn.send2ButtonLoc(m.chat, await (await fetch(thumb)).buffer(), resultnya.trim(), credit, 'Audio', `.yta ${vid.url}`, 'Video', `.yt ${vid.url}`)
-	}
+	//}
 }
 handler.help = ['play'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
