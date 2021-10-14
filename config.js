@@ -2,10 +2,10 @@ let fs = require('fs')
 let fetch = require('node-fetch')
 global.ownerName = ['Akmalz','J-BOT'] // Ketik nama kamu disini
 global.botName = 'WA-BOT' // Isi nama bot kamu
-global.owner = ['6281326635396', '62857024477637'] // Letakan nomor kamu disini
+global.owner = ['4365044631513','6285706052368'] // Letakan nomor kamu disini
 global.mods = [] // Moderator?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Pengguna premium tidak memerlukan limit
-global.credit = '© Bot-WhatsApp'
+global.credit = '� Bot-WhatsApp'
 global.APIs = { // API Prefix
   // nama: 'https://website'
   bx: 'https://bx-hunter.herokuapp.com',
@@ -37,16 +37,22 @@ global.repoName = 'Maybelowe/updet'
 global.repoName2 = 'ariffb25/stikerinbot'
 global.repoBranch = 'main'
 global.repoBranch2 = 'main'
-/*
+
 global.repos = {
 	url: 'https://github.com/Dvnz99/stikelinbot',
 	name: 'Maybelowe/updet',
 	branch: 'main',
 }
-*/
+
 // Sticker WM
-global.packname = 'BOT-WA'
-global.author = '🗿'
+global.packname = '\n\n\n\n\nAkmalz\n\n\n\n\n'
+global.author = ''
+/*
+let res = fetch('https://raw.githubusercontent.com/Dvnz99/stikelinbot/master/elaina.json?token=ATKDFAU4E4CLK46S3WVJFOTBLPK7O')
+let data = res.json()
+let ela = data[Math.floor(Math.random() * data.length)]
+global.imek = ela.url
+*/
 
 let listimg = [
 	"https://i.ibb.co/dMs2VDN/elaina-majo-no-tabitabi-library-books-witch-school-white-hair-smiling-anime-42814-resized.jpg",
