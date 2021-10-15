@@ -61,7 +61,9 @@ let listimg = [
 	"https://i.ibb.co/r2fCYWV/elaina-majo-no-tabitabi.jpg",
 	"https://i.ibb.co/Qr5z3JK/HD-wallpaper-anime-the-journey-of-elaina-elaina-the-journey-of-elaina.jpg"
 ]
-global.rImg = listimg[Math.floor(Math.random() * listimg.length)]
+global.elaImg = listimg[Math.floor(Math.random() * listimg.length)]
+global.fakeThumb = listimg[Math.floor(Math.random() * listimg.length)]
+
 
 global.wait = '_*tunggu..*_'
 global.eror = '_*Server Error*_'
