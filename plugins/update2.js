@@ -5,7 +5,7 @@ const { join } = require('path')
 
 let confirmation = {}
 let repository = repoName
-let branch = repobranch
+let branch = repoBranch
 
 async function handler(m, { text }) {
     let res = await fetch(`https://raw.githubusercontent.com/${repository}/${branch}/${text}`)
