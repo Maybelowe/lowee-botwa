@@ -382,7 +382,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       time: clock,
       battery: conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? 'Mengisi Daya' : ''}` : 'undefined',
       totalChat: chats.length - groups.length,
-      jadibot: totaljadibot.length
+      jadibot: totaljadibot.length,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
