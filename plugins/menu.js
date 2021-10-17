@@ -10,7 +10,7 @@ const defaultMenu = {
   before: `Hai, %name!
 
 *USER INFO*
-• Limit : *( %limit / %defaultLimit )*
+• Limit : *%limit*
 • Role : *%role*
 • Level : *%level (%exp / %maxexp)*
 • Total Xp : *%totalexp XP*
