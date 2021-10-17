@@ -388,7 +388,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     await conn.send2ButtonLoc(m.chat, await (await fetch(flaz + teks)).buffer(), text.trim(), 'Follow My Instagram\n' + igUrl, 'Owner Bot', '.owner', 'Bot Status', '.botstatus', m)
-    //await conn.send2ButtonImg(m.chat, await (await fetch(flaz + teks)).buffer(), text.trim(), 'Follow My Instagram\n' + igUrl, 'Owner Bot', `.owner`, 'Bot Status', `.botstatus`, m, { /*["fileLength"] = 9999999999, thumbnail: await (await fetch(fakeThumb)).buffer()*/ })
+    // await conn.send2ButtonImg(m.chat, await (await fetch(flaz + teks)).buffer(), text.trim(), 'Follow My Instagram\n' + igUrl, 'Owner Bot', `.owner`, 'Bot Status', `.botstatus`, m, { /*["fileLength"] = 9999999999, thumbnail: await (await fetch(fakeThumb)).buffer()*/ })
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
@@ -407,7 +407,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.exp = 3
+handler.exp = 10
 
 module.exports = handler
 
@@ -419,10 +419,11 @@ const chats = conn.chats.all()
 
 
 function clockString(ms) {
+  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+  return [d, h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 function ucapan() {
   const say = moment.tz('Asia/Jakarta').format('HH')
