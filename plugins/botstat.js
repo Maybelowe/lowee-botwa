@@ -22,8 +22,8 @@ let handler = async (m, { conn }) => {
 ├ *${device_manufacturer}* Device
 ├ *${device_model}* Model
 ├ *${wa_version}* WA Version
-├ ${os_version} OS
-├ ${os.platform()} Platform
+├ *${os_version}* OS
+├ *${os.platform()}* Platform Yang Dipakai
 ├ *${mcc}* MCC
 ├ *${mnc}* MNC
 ├ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
