@@ -380,7 +380,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       xp4levelup: max - exp <= 0 ? `Siap untuk *${_p}levelup*` : `${max - exp} XP lagi untuk levelup`,
       level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
       time: clock,
-      battery: conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? 'Mengisi Daya' : ''}` : 'undefined',
+      battery: `${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? 'Mengisi Daya' : ''}` : 'undefined'}`,
       totalChat: chats.length - groups.length,
       jadibot: totaljadibot.length,
       readmore: readMore
