@@ -4,8 +4,6 @@ let fs = require('fs')
 let path = require('path')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
-let p = 0
-let m = '```'
 const defaultMenu = {
   before: `Hai, %name!
 
@@ -39,98 +37,98 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
-    'main': 'UTAMA',
-    'game': 'GAME',
-    'xp': 'EXP & LIMIT',
-    'sticker': 'STIKER',
-    'kerang': 'KERANG AJAIB',
-    'quotes': 'QUOTES',
-    'admin': `ADMIN ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`,
-    'group': 'GRUP',
-    'premium': 'PREMIUM',
-    'internet': 'INTERNET',
-    'anonymous': 'ANON CHAT',
-    'nulis': 'NULIS & LOGO',
-    'downloader': 'DOWNLOADER',
-    'tools': 'TOOLS',
-    'fun': 'FUN',
-    'database': 'DATABASE',
-    'vote': 'VOTING',
-    'absen': 'ABSEN',
-    'quran': 'AL QUR\'AN',
-    'audio': 'PENGUBAH SUARA',
-    'jadibot': 'JADI BOT',
-    'info': 'INFO',
-    '': 'TANPA KATEGORI',
+    'main': 'Utama',
+    'game': 'Game',
+    'xp': 'Exp & Limit',
+    'sticker': 'Stiker',
+    'kerang': 'Kerang Ajaib',
+    'quotes': 'Quotes',
+    'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`,
+    'group': 'Grup',
+    'premium': 'Premium',
+    'internet': 'Internet',
+    'anonymous': 'Anonymous Chat',
+    'nulis': 'MagerNulis & Logo',
+    'downloader': 'Downloader',
+    'tools': 'Tools',
+    'fun': 'Fun',
+    'database': 'Database',
+    'vote': 'Voting',
+    'absen': 'Absen',
+    'quran': 'Al Qur\'an',
+    'audio': 'Pengubah Suara',
+    'jadibot': 'Jadi Bot',
+    'info': 'Info',
+    '': 'Tanpa Kategori',
   }
   if (teks == 'game') tags = {
-    'game': 'GAME'
+    'game': 'Game'
   }
   if (teks == 'xp') tags = {
-    'xp': 'EXP & LIMIT'
+    'xp': 'Exp & Limit'
   }
   if (teks == 'stiker') tags = {
-    'sticker': 'STIKER'
+    'sticker': 'Stiker'
   }
   if (teks == 'kerangajaib') tags = {
-    'kerang': 'KERANG AJAIB'
+    'kerang': 'Kerang Ajaib'
   }
   if (teks == 'quotes') tags = {
-    'quotes': 'QUOTES'
+    'quotes': 'Quotes'
   }
   if (teks == 'admin') tags = {
-    'admin': `ADMIN ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`
+    'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`
   }
   if (teks == 'grup') tags = {
-    'group': 'GRUP'
+    'group': 'Grup'
   }
   if (teks == 'premium') tags = {
-    'premium': 'PREMIUM'
+    'premium': 'Premium'
   }
   if (teks == 'internet') tags = {
-    'internet': 'INTERNET'
+    'internet': 'Internet'
   }
   if (teks == 'anonymous') tags = {
-    'anonymous': 'ANON CHAT'
+    'anonymous': 'Anonymous Chat'
   }
   if (teks == 'nulis') tags = {
-    'nulis': 'NULIS & LOGO'
+    'nulis': 'MagerNulis & Logo'
   }
   if (teks == 'downloader') tags = {
-    'downloader': 'DOWNLOADER'
+    'downloader': 'Downloader'
   }
   if (teks == 'tools') tags = {
-    'tools': 'TOOLS'
+    'tools': 'Tools'
   }
   if (teks == 'fun') tags = {
-    'fun': 'FUN'
+    'fun': 'Fun'
   }
   if (teks == 'database') tags = {
-    'database': 'DATABASE'
+    'database': 'Database'
   }
   if (teks == 'vote') tags = {
-    'vote': 'VOTING',
-    'absen': 'ABSEN'
+    'vote': 'Voting',
+    'absen': 'Absen'
   }
   if (teks == 'quran') tags = {
-    'quran': 'AL QUR\'AN'
+    'quran': 'Al Qur\'an'
   }
   if (teks == 'audio') tags = {
-    'audio': 'PENGUBAH SUARA'
+    'audio': 'Pengubah Suara'
   }
   if (teks == 'jadibot') tags = {
-    'jadibot': 'JADI BOT'
+    'jadibot': 'Jadi Bot'
   }
   if (teks == 'info') tags = {
-    'info': 'INFO'
+    'info': 'Info'
   }
   if (teks == 'tanpakategori') tags = {
-    '': 'TANPA KATEGORI'
+    '': 'Tanpa Kategori'
   }
   if (teks == 'owner') tags = {
-    'owner': 'OWNER',
-    'host': 'HOST',
-    'advanced': 'ADVANCED'
+    'owner': 'Owner',
+    'host': 'Host',
+    'advanced': 'Advanced'
   }
 
 
@@ -366,7 +364,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     let replace = {
       '%': '%',
       p: _p, uptime, muptime,
-      defaultLimit: iniLimit,
       me: conn.user.name,
       npmname: package.name,
       npmdesc: package.description,
@@ -380,8 +377,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-   // await conn.send2ButtonLoc(m.chat, await (await fetch(flaz + teks)).buffer(), text.trim(), 'Follow My Instagram\n' + igUrl, 'Owner Bot', '.owner', 'Bot Status', '.botstatus', m)
-    await conn.send2ButtonImg(m.chat, await (await fetch(flaz + teks)).buffer(), text.trim(), 'Follow My Instagram\n' + igUrl, 'Owner Bot', `.owner`, 'Bot Status', `.botstatus`, m, { /*["fileLength"] = 9999999999,*/ thumbnail: await (await fetch(fakeThumb)).buffer() })
+    await conn.send2ButtonLoc(m.chat, await (await fetch(flaz + teks)).buffer(), text.trim(), 'Follow My Instagram\n' + igUrl, 'OWNER BOT', '.owner', 'BOT STATUS', '.botstatus', m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
