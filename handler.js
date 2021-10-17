@@ -47,6 +47,7 @@ module.exports = {
           if (!('autolevelup' in user)) user.autolevelup = false
           if (!isNumber(user.pc)) user.pc = 0
           if (!isNumber(user.warning)) user.warning = 0
+          if (!('pasangan' in user)) user.pasangan = ''
         } else global.db.data.users[m.sender] = {
           exp: 0,
           limit: 10,
@@ -64,6 +65,7 @@ module.exports = {
           autolevelup: false,
           pc: 0,
           warning: 0,
+          pasangan: '',
         }
 
         let chat = global.db.data.chats[m.chat]
@@ -162,8 +164,8 @@ module.exports = {
       let participants = m.isGroup ? groupMetadata.participants : [] || []
       let user = m.isGroup ? participants.find(u => u.jid == m.sender) : {} // User Data
       let bot = m.isGroup ? participants.find(u => u.jid == this.user.jid) : {} // Data Kamu (bot)
-      let isAdmin = user?.isAdmin || user?.isSuperAdmin || false // Apakah user admin?
-      let isBotAdmin = bot?.isAdmin || bot?.isSuperAdmin || false // Apakah kamu (bot) admin?
+      let isAdmin = user.isAdmin || user.isSuperAdmin || false // Apakah user admin?
+      let isBotAdmin = bot.isAdmin || bot.isSuperAdmin || false // Apakah kamu (bot) admin?
       let isBlocked = this.blocklist.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != this.user.jid).includes(m.sender) // Apakah user diblokir?
       for (let name in global.plugins) {
         let plugin = global.plugins[name]
@@ -272,7 +274,7 @@ module.exports = {
           }
 
           m.isCommand = true
-          let xp = 'exp' in plugin ? parseInt(plugin.exp) : 20 // Pendapatkan XP per Command
+          let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // Pendapatkan XP per Command
           if (xp > 200) m.reply('Ngecit -_-') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
@@ -397,7 +399,7 @@ module.exports = {
                 .setGuildIcon(ppgc)
                 .setMemberCount(groupMetadata.participants.length)
                 .setAvatar(pp)
-                .setBackground("https://i.ibb.co/ydxd6YY/bgWelc.png")
+                .setBackground("https://i.ibb.co/KhtRxwZ/dark.png")
                 .toAttachment()
 
               let lea = await new knights.Goodbye()
@@ -406,7 +408,7 @@ module.exports = {
                 .setGuildIcon(ppgc)
                 .setMemberCount(groupMetadata.participants.length)
                 .setAvatar(pp)
-                .setBackground("https://i.ibb.co/ydxd6YY/bgWelc.png")
+                .setBackground("https://i.ibb.co/KhtRxwZ/dark.png")
                 .toAttachment()
 
               this.sendFile(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), 'pp.jpg', text, null, false, {
@@ -438,7 +440,7 @@ module.exports = {
 Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
 
 ketik *.on delete* untuk mematikan pesan ini
-`.trim(), '', 'Matikan Antidelete', ',off delete', m.message, {
+`.trim(), '', 'Matikan Antidelete', ',on delete', m.message, {
       contextInfo: {
         mentionedJid: [m.participant]
       }
@@ -474,7 +476,7 @@ ketik *.on delete* untuk mematikan pesan ini
 
     ketik *.off desc* untuk mematikan pesan ini
         `.trim()
-    this.sendButton(jid, caption, '', 'Matikan Detect Ubah Deskripsi', ',off desc', { contextInfo: { mentionedJid: this.parseMention(caption) } })
+    this.sendButton(jid, caption, '', 'Matikan Deskripsi', ',off desc', { contextInfo: { mentionedJid: this.parseMention(caption) } })
 
   }
 }
