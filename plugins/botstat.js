@@ -1,3 +1,4 @@
+let os = require('os')
 let handler = async (m, { conn }) => {
     let { anon, anticall, antispam, antitroli, backup, jadibot, groupOnly, nsfw } = global.db.data.settings[conn.user.jid]
     const chats = conn.chats.all()
@@ -6,6 +7,8 @@ let handler = async (m, { conn }) => {
 
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
+    
+    let { wa_version, mcc, mnc, os_version, device_manufacturer, device_model } = conn.user.phone
 
     m.reply(`
 ┌─〔 Status 〕
@@ -16,6 +19,13 @@ let handler = async (m, { conn }) => {
 ├ *${Object.keys(global.db.data.users).length}* Pengguna
 ├ *${totaljadibot.length}* Jadibot
 ├ *${conn.blocklist.length}* Terblock
+├ *${device_manufacturer}* Device
+├ *${device_model}* Model
+├ *${wa_version}* WA Version
+├ ${os_version} OS
+├ ${os.platform()} Platform
+├ *${mcc}* MCC
+├ *${mnc}* MNC
 ├ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
 ├ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
 └────
