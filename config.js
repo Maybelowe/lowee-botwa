@@ -32,7 +32,7 @@ global.APIKeys = { // APIKey nya disini
   'https://api.zeks.me': 'Koplerjiro',
   'https://dapuhy-api.herokuapp.com': 'J-BOT',
 }
-global.repoUrl = 'https://github.com/Dvnz99/stikelinbot'
+global.repoUrl = 'https://github.com/Maybelowe/updet'
 global.repoName = 'Maybelowe/updet'
 global.repoName2 = 'ariffb25/stikerinbot'
 global.repoBranch = 'main'
@@ -62,7 +62,7 @@ let listimg = [
 	"https://i.ibb.co/Qr5z3JK/HD-wallpaper-anime-the-journey-of-elaina-elaina-the-journey-of-elaina.jpg"
 ]
 global.elaImg = listimg[Math.floor(Math.random() * listimg.length)]
-global.fakeThumb = listimg[Math.floor(Math.random() * listimg.length)]
+global.fakeThumb = 'https://i.ibb.co/mq8TBvz/IMG-20211011-WA0107.jpg'
 
 
 global.wait = '_*tunggu..*_'
@@ -72,6 +72,7 @@ global.flaz = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=t
 global.igUrl = 'https://instagram.com/akmalz.zp'
 
 global.multiplier = 100 // Semakin tinggi, semakin sulit naik level
+global.iniLimit = 50 // Custom limit sesuai keinginan
 
 let chalk = require('chalk')
 let file = require.resolve(__filename)
