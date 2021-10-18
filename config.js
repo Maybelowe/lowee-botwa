@@ -45,7 +45,7 @@ global.repos = {
 }
 
 // Sticker WM
-global.packname = '\n\n\n\n\nAkmalz\n\n\n\n\n'
+global.packname = 'Made With ❤️ By Akmalz'
 global.author = ''
 /*
 let res = fetch('https://raw.githubusercontent.com/Dvnz99/stikelinbot/master/elaina.json?token=ATKDFAU4E4CLK46S3WVJFOTBLPK7O')
