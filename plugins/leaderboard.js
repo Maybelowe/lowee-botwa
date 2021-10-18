@@ -1,5 +1,4 @@
 let handler = async (m, { conn, args, participants }) => {
-	if (!args.length < 5) throw `minimal 5`
   let users = Object.entries(global.db.data.users).map(([key, value]) => {
     return { ...value, jid: key }
   })
