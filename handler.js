@@ -62,7 +62,7 @@ module.exports = {
           level: 0,
           call: 0,
           role: 'Bronze',
-          autolevelup: false,
+          autolevelup: true,
           pc: 0,
           warning: 0,
           pasangan: '',
