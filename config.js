@@ -72,7 +72,7 @@ global.flaz = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=t
 global.igUrl = 'https://instagram.com/akmalz.zp\nhttps://instagram.com/ryaanxz_'
 
 global.multiplier = 100 // Semakin tinggi, semakin sulit naik level
-// global.iniLimit = 50 // Custom limit sesuai keinginan
+global.iniLimit = 50 // Custom limit sesuai keinginan
 
 let chalk = require('chalk')
 let file = require.resolve(__filename)
