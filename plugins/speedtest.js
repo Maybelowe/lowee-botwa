@@ -5,8 +5,9 @@ let handler = async (m, { conn, isOwner, command }) => {
   if (global.conn.user.jid != conn.user.jid) return
   m.reply('Testing...')
   let o
+  let teks = 'speedtest --simple --share'
   try {
-    o = await exec(command.trimStart()  + ' ' + 'speedtest --simple --share'+.trimEnd())
+    o = await exec(command.trimStart()  + ' ' + teks.trimEnd())
   } catch (e) {
     o = e
   } finally {
