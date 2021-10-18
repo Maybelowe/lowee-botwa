@@ -4,8 +4,8 @@ let exec = promisify(cp.exec).bind(cp)
 let handler = async (m, { conn, isOwner, command }) => {
   if (global.conn.user.jid != conn.user.jid) return
   m.reply('Testing...')
-  let o
   let teks = 'speedtest --simple --share'
+  let o
   try {
     o = await exec(command.trimStart()  + ' ' + teks.trimEnd())
   } catch (e) {
