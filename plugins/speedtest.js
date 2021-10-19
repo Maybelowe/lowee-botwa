@@ -1,20 +1,11 @@
-let cp = require('child_process')
-let { promisify } = require('util')
-let exec = promisify(cp.exec).bind(cp)
-let handler = async (m, { conn, isOwner, command, text }) => {
-  if (global.conn.user.jid != conn.user.jid) return
+let { exec } = require('child_process');
+let handler = async (m, { conn }) => {
   m.reply('Testing...')
-  teks = 'speedtest-cli --simple --share'
-  let o
-  try {
-    o = await exec(command.trimStart()  + ' ' + (teks).trimEnd())
-  } catch (e) {
-    o = e
-  } finally {
-    let { stdout, stderr } = o
-    if (stdout.trim()) m.reply(stdout + '\n© Akmalz')
-    if (stderr.trim()) m.reply(stderr + '\n© Akmalz')
-  }
+  teks = 'speedtest --simple --share'
+  exec(teks, (err, stdout) => {	
+  	if (err) return m.reply(err.toString())
+  	if (stdout) return m.reply(stdout)
+  })
 }
 handler.help = ['speedtest']
 handler.tags = ['info']
