@@ -7,7 +7,7 @@ let handler = async (m, { conn, isOwner, command, text }) => {
   teks = 'speedtest-cli --simple --share'
   let o
   try {
-    o = await exec(teks)
+    o = await exec(command.trimStart()  + ' ' + (teks).trimEnd())
   } catch (e) {
     o = e
   } finally {
