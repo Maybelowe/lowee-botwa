@@ -4,7 +4,7 @@ let exec = promisify(cp.exec).bind(cp)
 let handler = async (m, { conn, isOwner, command, text }) => {
   if (global.conn.user.jid != conn.user.jid) return
   m.reply('Testing...')
-  let teks = 'speedtest-cli --simple' + text
+  let teks = 'speedtest-cli --simple ' + text
   let o
   try {
     o = await exec(teks.trimStart()  + ' ' + teks.trimEnd())
