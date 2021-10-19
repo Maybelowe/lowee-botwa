@@ -12,8 +12,8 @@ let handler = async (m, { conn, isOwner, command, text }) => {
     o = e
   } finally {
     let { stdout, stderr } = o
-    if (stdout.trim()) m.reply(stdout + '\n\n© Akmalz')
-    if (stderr.trim()) m.reply(stderr + '\n\n© Akmalz')
+    if (stdout.trim()) m.reply(stdout + '\n© Akmalz')
+    if (stderr.trim()) m.reply(stderr + '\n© Akmalz')
   }
 }
 handler.help = ['speedtest']
