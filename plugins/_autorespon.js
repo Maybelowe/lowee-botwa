@@ -62,7 +62,7 @@ handler.all = async function (m, { isBlocked }) {
 
     // update status/info/bio whatsapp
     if (new Date() * 1 - setting.status > 1000) {
-        let _uptime = process.uptime() * 23
+        let _uptime = process.uptime()
         let uptime = formater(_uptime)
         await this.setStatus(`Aktif selama ${uptime} | Mode: ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Group Only' : 'Public'}`).catch(_ => _)
         setting.status = new Date() * 1
