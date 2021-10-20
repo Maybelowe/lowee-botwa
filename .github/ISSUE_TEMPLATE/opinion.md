@@ -1,17 +1,10 @@
 ## Example/Contoh
 
-
-#### ENG:
-
 ---
-Opinion: type your opinion
-
----
-
-
-#### IDN:
-
----
-Pendapat: ketikan pendapatmu
+name: Bug report
+about: Create a report to help us improve
+title: ''
+labels: ''
+assignees: ''
 
 ---
