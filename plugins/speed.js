@@ -1,4 +1,5 @@
 let os = require('os')
+let { exec } = require('child_process')
 let util = require('util')
 let { performance } = require('perf_hooks')
 let { sizeFormatter } = require('human-readable')
