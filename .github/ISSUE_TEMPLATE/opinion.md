@@ -1,6 +1,6 @@
 ---
-Name/Nama: ''
-Opinion/Pendapat: ''
+Name: Your Name
+Opinion: ''
 ---
 
 **Describe your opinion**
