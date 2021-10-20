@@ -1,5 +1,7 @@
 ---
+Name/Nama: ''
 Opinion/Pendapat: ''
 ---
 
-**Ketikan pendapatmu tentang bot ini diatas**
+**Describe your opinion**
+Deskripsi lengkap mengenai pendapat mu
