@@ -64,7 +64,7 @@ handler.all = async function (m, { isBlocked }) {
     if (new Date() * 1 - setting.status > 1000) {
         let _uptime = process.uptime() * 1//Hack Runtime pakai [ process.uptime * jumlah ], contoh [ process.uptime * 10 ]
         let uptime = formater(_uptime)
-        await this.setStatus(`Bot active during ${uptime} || Mode: ${global.opts['self'] ? 'Self' : setting.groupOnly ? 'Group Only' : 'Public'}`).catch(_ => _)
+        await this.setStatus(`Uptime: ${uptime} | Mode: ${global.opts['self'] ? 'Self' : setting.groupOnly ? 'Group Only' : 'Public'} | © Wabot`).catch(_ => _)
         setting.status = new Date() * 1
     }
 
