@@ -5,3 +5,4 @@ let handler = async (m, { conn, text }) => {
    conn.sendMessage(m.chat, "\n".repeat(text), MessageType.text)
 }
 handler.command = /^unamedd$/i
+module.exports = handler
