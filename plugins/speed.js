@@ -39,12 +39,13 @@ let handler = async (m, { conn }) => {
   await m.reply('_Testing speed..._')
   let neww = performance.now()
   let speed = neww - old
+  // Sisa RAM : ${format(os.totalmem() - os.freemem())}
   let txt = `
 Merespon dalam ${speed} millidetik
 
-💻 *Server Info* :
+ðŸ’» *Server Info* :
 RAM :  ${format(os.totalmem())}
-Sisa RAM : ${format(os.totalmem() - os.freemem())}
+RAM Usage : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB
 
 _NodeJS Memory Usage_
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
