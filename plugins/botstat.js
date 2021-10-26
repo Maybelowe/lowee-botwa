@@ -10,7 +10,7 @@ let handler = async (m, { conn }) => {
     
     let { wa_version, mcc, mnc, os_version, device_manufacturer, device_model } = conn.user.phone
 
-    m.reply(`
+    res = `
 ┌─〔 Status 〕
 ├ Aktif selama ${uptime}
 ├ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? 'Mengisi Daya' : ''}` : 'undefined'}
@@ -39,8 +39,9 @@ let handler = async (m, { conn }) => {
 ├ ${groupOnly ? '✓' : '✘'} *Mode Grup*
 ├ ${jadibot ? '✓' : '✘'} *Jadi Bot*
 ├ ${nsfw ? '✓' : '✘'} *Mode Nsfw*
-└────
-    `.trim())
+└────`
+conn.sendButton(m.chat, res.trim(), credit, 'Ping', '.ping', m)
+
 }
 handler.help = ['botstatus']
 handler.tags = ['info']
