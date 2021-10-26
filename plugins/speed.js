@@ -43,7 +43,7 @@ let handler = async (m, { conn }) => {
   let txt = `
 Merespon dalam ${speed} millidetik
 
-ðŸ’» *Server Info* :
+🗄️ *Server Info* :
 RAM :  ${format(os.totalmem())}
 RAM Usage : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB
 
