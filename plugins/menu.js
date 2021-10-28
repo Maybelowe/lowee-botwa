@@ -37,6 +37,14 @@ const defaultMenu = {
 ${'```%npmdesc```'}
 `,
 }
+
+let format = sizeFormatter({
+  std: 'JEDEC', // 'SI' (default) | 'IEC' | 'JEDEC'
+  decimalPlaces: 2,
+  keepTrailingZeroes: false,
+  render: (literal, symbol) => `${literal} ${symbol}B`,
+})
+
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let tags
   let teks = `${args[0]}`.toLowerCase()
@@ -382,7 +390,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
       time: clock,
       battery: `${conn.battery != undefined ? `*${conn.battery.value}%* ${conn.battery.live ? 'Mengisi Daya' : ''}` : 'Belum Terdeteksi'}`,
-      ram: `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`,
+      ram: `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${format(os.totalmem())}`,
       totalChat: chats.length,
       readmore: readMore
     }
