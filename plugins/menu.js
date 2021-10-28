@@ -23,7 +23,6 @@ const defaultMenu = {
 • Tanggal Islam : *%dateIslamic*
 
 *BOT INFO*
-• Total Chat : *%totalChat*
 • User : *%totalreg*
 • Baterai : %battery
 • RAM : *%ram*
