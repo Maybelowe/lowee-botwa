@@ -29,14 +29,14 @@ handler.all = async function (m, { isBlocked }) {
     if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
         this.sendButton(m.chat, `┌〔 Undang Bot ke Grup 〕\n├ Free, syarat member 100+\n├ 30 Hari / Rp 5,000\n├ 30 Hari + Premium / Rp 7,000\n└────\n\n` + igUrl.trim(), credit, 'Pemilik Bot', ',owner', m)
     }
-
+/*
 	//Tag Owner
 	let own = /(@628885960825|@6281326635396)/i
 	let isTagOwner = own.exec(m.text)
 	if (isTagOwner && !m.fromMe) {
-		m.reply('Ya? Ada apa tag ownerku?')
+	   m.reply('Ya? Ada apa tag ownerku?')
 	}
-	
+*/	
     // salam
     let reg = /(ass?alam|اَلسَّلاَمُ عَلَيْكُمْ|السلام عليکم)/i
     let isSalam = reg.exec(m.text)
