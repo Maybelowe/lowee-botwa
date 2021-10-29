@@ -23,7 +23,6 @@ const defaultMenu = {
 • Tanggal Islam: *%dateIslamic*
 
 *BOT INFO*
-• Status: %status
 • Baterai: %battery
 • RAM: *%ram*
 • User: *%totalreg*
@@ -433,9 +432,9 @@ const chats = conn.chats.all()
 
 
 function clockString(ms) {
-  let w = isNaN(ms) ? '--' : Math.floor(ms / 604800000) 
-  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000) % 7
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
+ // let w = isNaN(ms) ? '--' : Math.floor(ms / 604800000) 
+ // let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000) % 7
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) // % 24
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
