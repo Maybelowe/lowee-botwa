@@ -50,6 +50,7 @@ let format = sizeFormatter({
 
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   // let setting = db.data.settings[this.user.jid]
+  let chats = conn.chats.all()
   let tags
   let teks = `${args[0]}`.toLowerCase()
   let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
@@ -428,8 +429,6 @@ const more = String.fromCharCode(1)
 const readMore = more.repeat(1)
 */
 const clock = moment.tz('Asia/Jakarta').format('HH:mm:ss')
-const chats = conn.chats.all()
-
 
 function clockString(ms) {
  // let w = isNaN(ms) ? '--' : Math.floor(ms / 604800000) 
