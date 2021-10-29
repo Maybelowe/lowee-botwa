@@ -6,8 +6,8 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 let os = require('os')
 let { sizeFormatter } = require('human-readable')
-let p = 0
-let m = '```'
+let setting = db.data.settings[this.user.jid]
+
 const defaultMenu = {
   before: `Hai, %name!
 
