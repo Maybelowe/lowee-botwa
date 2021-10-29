@@ -6,7 +6,6 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 let os = require('os')
 let { sizeFormatter } = require('human-readable')
-let setting = db.data.settings[this.user.jid]
 
 const defaultMenu = {
   before: `Hai, %name!
@@ -51,6 +50,7 @@ let format = sizeFormatter({
 })
 
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
+  let setting = db.data.settings[this.user.jid]
   let tags
   let teks = `${args[0]}`.toLowerCase()
   let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
@@ -433,8 +433,9 @@ const chats = conn.chats.all()
 
 
 function clockString(ms) {
-  // let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let w = isNaN(ms) ? '--' : Math.floor(ms / 604800000) 
+  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000) % 7
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
