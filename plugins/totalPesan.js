@@ -2,6 +2,7 @@ let handler = async (m, { conn }) => {
     let id = m.chat
     let mCount = {}
     let totalM = 0
+  try {
     await conn.loadAllMessages(id, m => {
         let user = m.key.fromMe ? conn.user.jid : m.participant ? m.participant : id.includes('g.us') ? '' : id
         if (!user) return
@@ -13,6 +14,10 @@ let handler = async (m, { conn }) => {
     let pesan = sorted.map(v => `conn.getName(jid): ${v[1]} pesan`).join('\n')
     // let pesan = sorted.map(v => `${v[0].replace(/(\d+)@.+/, '@$1')}: ${v[1]} pesan`).join('\n')
     m.reply(`${totalM} pesan terakhir\n${pesan}`, false, { contextInfo: { mentionedJid: sorted.map(v => v[0]) } })
+  } catch (e) {
+    conn.reply(m.chat, 'Maaf, fitur tersebut sedang error', m)
+    throw e
+  }
 }
 handler.help = ['totalpesan']
 handler.tags = ['group']
