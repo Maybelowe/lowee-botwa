@@ -49,7 +49,7 @@ let format = sizeFormatter({
 })
 
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
-  let setting = db.data.settings[this.user.jid]
+  // let setting = db.data.settings[this.user.jid]
   let tags
   let teks = `${args[0]}`.toLowerCase()
   let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
@@ -401,7 +401,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     await conn.send2ButtonLoc(m.chat, await (await fetch(flaz + teks)).buffer(), text.trim(), 'Follow My Instagram\n' + igUrl, 'Owner Bot', '.owner', 'Bot Status', '.botstatus', m)
-    // await conn.send2ButtonImg(m.chat, await (await fetch(flaz + teks)).buffer(), text.trim(), 'Follow My Instagram\n' + igUrl, 'Owner Bot', `.owner`, 'Bot Status', `.botstatus`, m, { /*["fileLength"] = 9999999999, thumbnail: await (await fetch(fakeThumb)).buffer()*/ })
+    // await conn.send2ButtonImg(m.chat, await (await fetch(flaz + teks)).buffer(), text.trim(), 'Follow My Instagram\n' + igUrl, 'Owner Bot', `.owner`, 'Bot Status', `.botstatus`, m, { /*["fileLength"] = 9999999999,*/ thumbnail: await (await fetch(flaz + teks)).buffer() })
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
