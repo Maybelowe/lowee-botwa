@@ -12,22 +12,23 @@ const defaultMenu = {
   before: `Hai, %name!
 
 *USER INFO*
-• Limit : *%limit*
-• Role : *%role*
-• Level : *%level (%exp / %maxexp)*
-• Total Xp : *%totalexp XP*
+• Limit: *%limit*
+• Role: *%role*
+• Level: *%level (%exp / %maxexp)*
+• Total Xp: *%totalexp XP*
   [%xp4levelup]
 
 *DATE*
-• Tanggal : *%week, %date*
-• Weton : *%weton*
-• Tanggal Islam : *%dateIslamic*
+• Tanggal: *%week, %date*
+• Weton: *%weton*
+• Tanggal Islam: *%dateIslamic*
 
 *BOT INFO*
-• User : *%totalreg*
-• Baterai : %battery
-• RAM : *%ram*
-• Uptime : *%uptime*
+• Status: %status
+• Baterai: %battery
+• RAM: *%ram*
+• User: *%totalreg*
+• Uptime: *%uptime*
 %readmore`.trimStart(),
 
   header: '*%category*',
