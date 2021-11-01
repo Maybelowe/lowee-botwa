@@ -7,9 +7,10 @@ let handler = async (m, { conn, text }) => {
 	const { name, alternative_names, url, image_url } = damta.results[0]
 	teks = `*Character found!*\n\n*Name:* ${name}\n*Alternative names:* ${alternative_names}\n*URL*: ${url}`
 	try {
-		conn.sendMessage(m.chat, await (await fetch(image_url)).buffer(), MessageType.image, { quoted: m, caption: teks })
+	   conn.sendMessage(m.chat, await (await fetch(image_url)).buffer(), MessageType.image, { quoted: m, caption: teks })
 	} catch(e) {
-		m.reply('Chara Not Found')
+	   m.reply('Chara Not Found')
+           throw e
 	}
 }
 handler.help = ['chara <pencarian>']
