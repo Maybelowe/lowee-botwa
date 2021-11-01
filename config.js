@@ -34,16 +34,16 @@ global.APIKeys = { // APIKey nya disini
   'https://api.zeks.me': 'Koplerjiro',
   'https://dapuhy-api.herokuapp.com': 'J-BOT',
 }
-global.repoUrl = 'https://github.com/Maybelowe/updet'
-global.repoName = 'Maybelowe/updet'
+global.repoUrl = 'https://github.com/Maybelowe/lowee-botwa'
+global.repoName = 'Maybelowe/lowee-botwa'
 global.repoName2 = 'ariffb25/stikerinbot'
 global.repoBranch = 'main'
 global.repoBranch2 = 'main'
 
 global.repos = {
-	url: 'https://github.com/Dvnz99/stikelinbot',
-	name: 'Maybelowe/updet',
-	branch: 'main',
+   url: 'https://github.com/Dvnz99/stikelinbot',
+   name: 'Maybelowe/updet',
+   branch: 'main',
 }
 
 // Sticker WM
