@@ -4,7 +4,7 @@
 <h1 align="center">stikerinbot</h1>
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Maybelowe/updet)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Maybelowe/updet/tree/main-2)
 
 [![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/GVwpKf83s42D1CnIfDW19G)
 
@@ -17,7 +17,7 @@
 
 ```bash
 git clone https://github.com/Maybelowe/updet
-cd stikerinbot
+cd updet
 npm i
 npm update
 node .
