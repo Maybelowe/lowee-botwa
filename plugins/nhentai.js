@@ -16,3 +16,5 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['nhentai <code>']
 handler.tags = ['download']
 handler.command = /^nhentai/i
+
+module.exports = handler
