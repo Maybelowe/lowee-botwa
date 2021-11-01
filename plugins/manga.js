@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
 	const { title, synopsis, chapters, url, rated, score, image_url } = damta.results[0]
 	teks = `*Manga found!*\n\n*Title:* ${title}\n*Chapters:* ${chapters}\n*Rating:* ${rated}\n*Score:* ${score}\n*Synopsis:* ${synopsis}\n*URL*: ${url}`
 	try {
-		conn.sendFile(m.chat, image_url, teks, m, 0, { thumbnail: await (await fetch(image_url)).buffer() })
+		conn.sendMessage(m.chat, await (await fetch(image_url)).buffer(), MessageType.image, { quoted: m, caption: teks })
 	} catch(e) {
 		m.reply('Manga Not Found')
 	}
