@@ -6,7 +6,7 @@ let package = require('./package.json')
 const CFonts = require('cfonts')
 CFonts.say('wabot', {
   colors: ['#f2aa4c'],
-  font: 'chrome',
+  font: 'block',
   align: 'center',
 })
 CFonts.say(`'${package.name}' Oleh @${package.author.name || package.author}`, {
