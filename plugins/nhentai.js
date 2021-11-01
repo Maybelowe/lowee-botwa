@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
 	teks = `*Nhentai code found!*\n\n*Title :* ${json.result.title}\n\n${json.result.details}`
 	try {
            m.reply(teks)
-	   conn.sendMessage(m.chat, await (await fetch(json.result.link)).buffer(), MessageType.document, { quoted: m })
+	   conn.sendMessage(m.chat, await (await fetch()).buffer(), MessageType.document, { quoted: m })
 	} catch(e) {
 	   m.reply('Nhentai code Not Found')
            throw e
@@ -18,3 +18,5 @@ handler.tags = ['download']
 handler.command = /^nhentai/i
 
 module.exports = handler
+
+/* Belum Tuntas */
