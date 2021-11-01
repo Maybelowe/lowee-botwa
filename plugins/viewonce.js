@@ -7,9 +7,9 @@ let handler = async (m, { conn }) => {
     }
 }
 
-handler.help = ['readviewonce']
+handler.help = ['readviewonce','readvo']
 handler.tags = ['tools']
 
-handler.command = /^readviewonce/i
+handler.command = /^read(viewonce|vo)/i
 
 module.exports = handler
