@@ -2,10 +2,10 @@ let fs = require('fs')
 let fetch = require('node-fetch')
 global.ownerName = ['Akmalz','Akmalz - 2'] // Ketik nama kamu disini
 global.botName = 'WA-BOT' // Isi nama bot kamu
-global.owner = ['4365044631513','6281326635396'] // Letakan nomor kamu disini
+global.owner = ['4365044631513','628885960825'] // Letakan nomor kamu disini
 global.mods = [] // Moderator?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Pengguna premium tidak memerlukan limit
-global.credit = '© Bot-WhatsApp'
+global.credit = '© akmall.kz'
 global.APIs = { // API Prefix
   // nama: 'https://website'
   rey: 'https://server-api-rey.herokuapp.com',
